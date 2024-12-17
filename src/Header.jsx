@@ -13,7 +13,7 @@ const Header = ({ systemTime }) => {
               AI CITTEN AGENT
             </h1>
             <a
-              href="https://dexscreener.com/solana/C6xv1P7mw1ZdKYeCtSGSSXELyWLrnVP5VkFphksUpump"
+              href="https://dexscreener.com/solana/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-green-500/70 hover:text-green-500 transition-colors tracking-widest"

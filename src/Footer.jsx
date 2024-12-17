@@ -5,7 +5,7 @@ const Footer = () => {
   const socialLinks = [
     {
       name: '[TWITTER]',
-      url: 'https://x.com/AINPCAGENT',
+      url: 'https://x.com/AiCittenAgent',
     },
     {
       name: '[PUMPFUN]',
@@ -13,7 +13,7 @@ const Footer = () => {
     },
     {
       name: '[TELEGRAM]',
-      url: 'https://t.me/AINPCAGENT',
+      url: 'https://bit.ly/aicittenagent',
     }
   ];
 
