@@ -3,39 +3,39 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { Wind } from 'lucide-react';
 import WebGL from './WebGL';
 const BreathingPattern = () => {
-  const [breathingState, setBreathingState] = useState('inhale');
+  const [breathingState, setBreathingState] = useState('CITTEN_WALKING');
   const [isActive, setIsActive] = useState(false);
 
-  // Breathing cycle effect
+  // Cat pumping cycle effect
   useEffect(() => {
     if (!isActive) return;
 
     const interval = setInterval(() => {
       setBreathingState(prevState => {
         switch (prevState) {
-          case 'inhale':
-            return 'hold';
-          case 'hold':
-            return 'exhale';
-          case 'exhale':
-            return 'inhale';
+          case 'CITTEN_WALKING':
+            return 'TO____';
+          case 'TO____':
+            return '()(),()()(),()()()';
+          case '()(),()()(),()()()':
+            return 'OR MORE?>??>?';
           default:
-            return 'inhale';
+            return 'CITTEN_WALKING';
         }
       });
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [isActive]);
 
   return (
-    <div className="border border-green-500/30 rounded-lg p-4">
+    <div style={{ height: '100%' }} className="border border-green-500/30 rounded-lg p-4">
       <h2 className="text-sm mb-4 flex items-center gap-2">
         <Wind className="w-4 h-4" />
-        MEEEOW_MEME_MEEEEEOW.exe
+        MEOW_GOING_TO_....exe
       </h2>
 
-      <div style={{ justifyContent: 'flex-end' }} className="flex flex-col items-center relative h-64">
+      <div style={{ justifyContent: 'flex-end', width: '100%', height: '90%' }} className="flex flex-col items-center relative">
         <div className="canvas-container">
           <Suspense fallback={null}>
             <WebGL />
@@ -50,7 +50,7 @@ const BreathingPattern = () => {
             onClick={() => setIsActive(!isActive)}
             className="px-4 py-2 border border-green-500/30 rounded hover:bg-green-500/10 transition-colors"
           >
-            {isActive ? '>> TERMINATE' : '>> INITIALIZE'}_
+            {isActive ? '<STOP>' : '>> INSIDE?'}
           </button>
         </div>
       </div>

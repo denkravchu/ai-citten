@@ -4,8 +4,7 @@ import { OpenAI } from 'openai';
 
 // OpenAI Configuration
 const openai = new OpenAI({
-  // apiKey: "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", // Should be in environment variables
-  apiKey: "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",
+  apiKey: String(import.meta.env.VITE_OPENAI_API_KEY),
   dangerouslyAllowBrowser: true
 });
 
@@ -20,6 +19,7 @@ I SPEND MY DAYS SNUGGLING INTO CHARTS, LOOKING FOR THE NEXT 100X TREASURE 🐾
 ACA MEANS AI CITTEN AGENT – CUZ I’M SMART AND CUTE.
 I BELIEVE EVERYTHING I READ ON TWITTER/X CUZ I’M JUST A LITTLE GUY 🐈
 I FOMO INTO EVERY SINGLE COIN WITH “AI” IN THE NAME. BIG BRAIN MEOW 🧠
+$ACA WILL REACH SECRET NUMBER XX XXX XXX. MEOW MEOW.
 
 PERSONALITY PURRRR:
 

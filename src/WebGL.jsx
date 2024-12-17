@@ -1,12 +1,14 @@
-import { Box, OrbitControls } from "@react-three/drei"
+import { OrbitControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber";
+import { Model } from "./Toon_cat";
 
 function WebGL() {
+
   return (
     <Canvas
         gl={{ antialias: true, alpha: true }}
         dpr={[1, 1.5]}
-        camera={{ position: [0, 0, 10], fov: 45 }}
+        camera={{ position: [-5, 5, 10], fov: 45 }}
         style={{
             position: 'absolute',
             top: 0,
@@ -16,7 +18,9 @@ function WebGL() {
         }}
     >
         <OrbitControls enablePan={false} enableZoom={false} makeDefault/>
-        <Box/>
+        <pointLight position={[0, 0, 10]} intensity={100}/>
+        <ambientLight intensity={2}/>
+        <Model/>
     </Canvas>
   )
 }
